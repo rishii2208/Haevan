@@ -3,7 +3,7 @@ const app = express();
 import cors from 'cors';
 app.use(cors());
 import { Server } from 'socket.io';
-const server = app.listen('8000', () => console.log('Server is up, 8000'));
+const server = app.listen(process.env.PORT || 8000, () => console.log(`Server is up on port ${process.env.PORT || 8000}`));
 const io = new Server(server, { cors: { origin: '*' } });
 import { handelStart, handelDisconnect, getType } from './lib';
 import { GetTypesResult, room } from './types';
