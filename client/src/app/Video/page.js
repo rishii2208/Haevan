@@ -170,12 +170,12 @@ export default function VideoPage() {
         <video
           ref={strangerVideoRef}
           autoPlay
-          className="w-full lg:w-2/5 h-auto lg:mx-16 scale-[120%] my-auto"
+          className="w-full lg:w-2/5 h-1/2 md:h-auto lg:mx-16 scale-[120%] my-auto"
         />
         <video
           ref={myVideoRef}
           autoPlay
-          className="w-full lg:w-2/5 h-auto lg:mx-16 scale-[120%] my-auto"
+          className="w-full lg:w-2/5 h-1/2 md:h-auto lg:mx-16 scale-[120%] my-auto"
         />
       </div>
 
