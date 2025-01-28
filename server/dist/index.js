@@ -8,7 +8,7 @@ const app = (0, express_1.default)();
 const cors_1 = __importDefault(require("cors"));
 app.use((0, cors_1.default)());
 const socket_io_1 = require("socket.io");
-const server = app.listen('8000', () => console.log('Server is up, 8000'));
+const server = app.listen(process.env.PORT || 8000, () => console.log(`Server is up on port ${process.env.PORT || 8000}`));
 const io = new socket_io_1.Server(server, { cors: { origin: '*' } });
 const lib_1 = require("./lib");
 let online = 0;
